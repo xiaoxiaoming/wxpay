@@ -140,7 +140,7 @@ public class WxRefundRequest extends WxPayRequest {
     }
 
     public String makeXml(){
-        if(this.params == null ){
+        if(shouldSign("sign")){
             buildParams();
             params.put("sign",makeSign(params,key));
         }

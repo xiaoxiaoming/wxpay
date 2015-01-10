@@ -57,7 +57,7 @@ public class WxBrandWCPayRequest extends WxPayRequest {
 
 
     public String makeJson(){
-        if(this.params == null  || !params.containsKey("paySign") || params.containsKey("package")){
+        if(shouldSign("paySign")){
             buildParams();
             params.put("paySign",makeSign(params,key));
         }

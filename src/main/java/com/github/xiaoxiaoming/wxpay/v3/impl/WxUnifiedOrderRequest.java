@@ -203,7 +203,7 @@ public class WxUnifiedOrderRequest extends WxPayRequest {
         params.put("auth_code",auth_code);
     }
     public String makeXml(){
-        if(this.params == null ){
+        if(shouldSign("sign") ){
             buildParams();
             params.put("sign",makeSign(params,key));
         }

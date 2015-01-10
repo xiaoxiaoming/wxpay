@@ -1,1 +1,1 @@
-Œ¢–≈÷ß∏∂SDK java
+weixin pay sdk for java

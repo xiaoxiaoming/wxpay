@@ -26,7 +26,7 @@ public abstract class WxPayRequest extends WxPayBase {
      * 是否应该生成签名
      * @return
      */
-    public boolean shouldSign(String signName){
+    protected boolean shouldSign(String signName){
         return this.params.isEmpty()|| !params.containsKey(signName);
     }
 
